@@ -38,7 +38,7 @@ SERVICE_FILE="/etc/systemd/system/doudian.service"
 NGINX_CONF="/etc/nginx/conf.d/doudian.conf"
 DEFAULT_PORT=2095
 GITHUB_USER="${GITHUB_USER:-simon2026-spe}"
-GITHUB_REPO="${GITHUB_REPO:-DouDian}"
+GITHUB_REPO="${GITHUB_REPO:-doudian-ysm}"
 
 # 临时目录
 TEMP_DIR=$(mktemp -d)

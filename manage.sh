@@ -9,7 +9,7 @@ DATA_DIR="/opt/doudian/data"
 CONFIG_FILE="/etc/default/doudian"
 SERVICE_FILE="/etc/systemd/system/doudian.service"
 GITHUB_USER="simon2026-spe"
-GITHUB_REPO="DouDian"
+GITHUB_REPO="doudian-ysm"
 
 RED='\033[0;31m'
 GREEN='\033[0;32m'

@@ -68,7 +68,7 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ steps.tag.outputs.tag }}
-          name: DouDian ${{ steps.tag.outputs.tag }}
+          name: doudian-ysm ${{ steps.tag.outputs.tag }}
           body: |
             ## DouDian 抖店代发供应商管理系统
 

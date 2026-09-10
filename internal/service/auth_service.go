@@ -31,3 +31,22 @@ func GetUserByID(id uint) (*model.User, error) {
 	}
 	return &user, nil
 }
+
+// ChangePassword 修改密码：校验原密码 -> bcrypt 重新哈希 -> 更新
+func ChangePassword(userID uint, oldPassword, newPassword string) error {
+	var user model.User
+	if err := database.DB.First(&user, userID).Error; err != nil {
+		return errors.New("用户不存在")
+	}
+
+	if err := bcrypt.CompareHashAndPassword([]byte(user.PasswordHash), []byte(oldPassword)); err != nil {
+		return errors.New("原密码错误")
+	}
+
+	hashed, err := bcrypt.GenerateFromPassword([]byte(newPassword), bcrypt.DefaultCost)
+	if err != nil {
+		return errors.New("密码加密失败")
+	}
+
+	return database.DB.Model(&user).Update("password_hash", string(hashed)).Error
+}

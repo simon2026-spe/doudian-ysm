@@ -154,9 +154,9 @@ const ShopList = () => {
   return (
     <div>
       <PageHeader
-        title="抖店管理"
-        subtitle="管理您的抖音店铺"
-        breadcrumbs={[{ title: '首页' }, { title: '抖店管理' }]}
+        title="车型管理"
+        subtitle="管理您的车型"
+        breadcrumbs={[{ title: '首页' }, { title: '车型管理' }]}
         extra={
           <Space>
             <Button icon={<UploadOutlined />} onClick={handleDownloadTemplate}>模板</Button>

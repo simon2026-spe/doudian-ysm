@@ -1,5 +1,9 @@
 .searchbar-container {
   margin-bottom: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
 }
 
 .searchbar-fields {
@@ -37,8 +41,19 @@
 
 .searchbar-item .ant-input-affix-wrapper {
   height: 32px;
+  display: flex;
+  align-items: center;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* wrapper 内部的 input 不要固定高度，避免 32px + padding 溢出导致文字偏移 */
+.searchbar-item .ant-input-affix-wrapper .ant-input {
+  height: auto;
+  line-height: 1.5;
 }
 
 .searchbar-actions {
-  margin-top: 12px;
+  display: flex;
+  align-items: center;
 }

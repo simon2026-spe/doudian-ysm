@@ -119,21 +119,6 @@ export const MENU_ITEMS = [
     label: '仪表盘',
   },
   {
-    key: '/shops',
-    icon: 'ShopOutlined',
-    label: '抖店管理',
-  },
-  {
-    key: '/suppliers',
-    icon: 'TeamOutlined',
-    label: '供应商管理',
-  },
-  {
-    key: '/products',
-    icon: 'ShoppingOutlined',
-    label: '商品管理',
-  },
-  {
     key: '/orders',
     icon: 'OrderedListOutlined',
     label: '订单管理',
@@ -142,6 +127,21 @@ export const MENU_ITEMS = [
     key: '/purchase-orders',
     icon: 'ShoppingCartOutlined',
     label: '采购单管理',
+  },
+  {
+    key: '/products',
+    icon: 'ShoppingOutlined',
+    label: '商品管理',
+  },
+  {
+    key: '/suppliers',
+    icon: 'TeamOutlined',
+    label: '供应商管理',
+  },
+  {
+    key: '/shops',
+    icon: 'ShopOutlined',
+    label: '抖店管理',
   },
   {
     key: '/tools',

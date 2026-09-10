@@ -60,7 +60,9 @@ const SearchBar = ({ fields = [], onSearch, onReset, extra, initialValues = {} }
     return (
       <div key={name} className="searchbar-item">
         <label className="searchbar-label">{label}：</label>
-        {component}
+        <Form.Item name={name} noStyle>
+          {component}
+        </Form.Item>
       </div>
     )
   }

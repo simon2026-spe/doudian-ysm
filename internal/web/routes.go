@@ -34,6 +34,8 @@ func SetupRouter() *gin.Engine {
 		authAPI := api.Group("")
 		authAPI.Use(middleware.AuthRequired())
 		{
+			authAPI.PUT("/change-password", controller.ChangePassword)
+
 			dashboard := authAPI.Group("/dashboard")
 			{
 				dashboard.GET("/stats", controller.GetDashboardStats)
